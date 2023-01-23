@@ -2,7 +2,7 @@
     Write a program that receives a number of days entered by the user and calculate how many minutes this amount of days has.
 '''
 
-from SubAlgoritmosPythonTutorialForBeginners import *
+from subalgorithm_Library import *
 
 print('Days to minutes converter')
 days = int(input('Number of days:\n'))
