@@ -3,5 +3,5 @@
 > Project status: In development
 
 '''
-  npm install
+npm install
 '''
