@@ -25,6 +25,6 @@ def convert_days_to_hours(days):
 
 # Funtion that converts hours to minutes
 def convert_hours_to_minutes(hours):
-    return f'{hours} hours are {hours * 60} minutes'
+    return f'{hours} hours are {hours * 60} minutes.'
 
 

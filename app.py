@@ -4,11 +4,16 @@
 
 from subalgorithm_Library import *
 
-print('Days to minutes converter')
-user_input = input('Number of days:\n')
+# Variable
+user_input = ''
 
-# Validating the input e running the program
-validate_and_execute(user_input)
+
+while user_input != 'exit':
+    user_input = input('Enter a number of days to be converted to minutes:\n')
+
+    # Validating the input e running the program
+    validate_and_execute(user_input)
+
 
 
 
