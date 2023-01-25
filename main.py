@@ -1,5 +1,5 @@
 """
-    Write a program that receives a number of days entered by the user and calculate the progress this amount of days has.
+    Write a program that takes a user-entered number of days  and calculates progress toward a user-defined goal.
 """
 
 # subalgorithm_Library
