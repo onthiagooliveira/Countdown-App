@@ -5,10 +5,17 @@
 from subalgorithm_Library import *
 
 print('Days to minutes converter')
-days = int(input('Number of days:\n'))
+user_input = input('Number of days:\n')
 
-# Function that converts days to hours
-hours = converterDaysTime(days)
+#Checking if the entered data is a number valid
+if user_input.isdigit():
+    user_input_number = int(user_input)
 
-# Function that converts hours to minutes
-minutes = converterHoursToMinutes(hours)
+    # Function that converts days to hours
+    hours = converterDaysTime(user_input_number)
+    print(hours)
+
+    # Function that converts hours to minutes
+
+
+
