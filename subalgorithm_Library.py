@@ -1,28 +1,27 @@
 # Function that validates data entered by the user
 def validate_and_execute(user_input):
     # Checking if the entered data is a number valid
-    if user_input.isdigit():
+    try:
 
         user_input_number = int(user_input)
+        if user_input_number > 0:
+            calculated_value = converterDaysTime(user_input_number)
+            print(calculated_value)
 
-        # Function that converts days to hours
-        hours = converterDaysTime(user_input_number)
-        print(hours)
+        elif user_input_number == 0:
+            print('You entered a 0, please enter a positive number')
 
-        # Function that converts hours to minutes
+        else:
+            print('It is not possible to convert, you entered a negative number.')
 
-    else:
-        print('Your entered nis not a valid number.')
+    except ValueError:
+        print('Your entered is not a valid number.')
 
 
 
 # Function that validates and converts days to hours
 def converterDaysTime(days):
-    if days > 0:
-        return f'{days} days are {days * 24} hours.'
-    elif days == 0:
-        return f'You entered a 0, please enter a valid number'
-
+    return f'{days} days are {days * 24} hours.'
 
 # Funtion that converts hours to minutes
 
