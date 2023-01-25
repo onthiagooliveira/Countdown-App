@@ -1,8 +1,8 @@
 # Function that validates data entered by the user
-
 def validate_and_execute(user_input):
     # Checking if the entered data is a number valid
     if user_input.isdigit():
+
         user_input_number = int(user_input)
 
         # Function that converts days to hours

@@ -7,6 +7,7 @@ from subalgorithm_Library import *
 print('Days to minutes converter')
 user_input = input('Number of days:\n')
 
+# Validating the input e running the prohram
 validate_and_execute(user_input)
 
 
