@@ -5,7 +5,7 @@ def validate_and_execute(user_input):
 
         user_input_number = int(user_input)
         if user_input_number > 0:
-            calculated_value = converterDaysTime(user_input_number)
+            calculated_value = convert_days_to_hours(user_input_number)
             print(calculated_value)
 
         elif user_input_number == 0:
@@ -20,9 +20,11 @@ def validate_and_execute(user_input):
 
 
 # Function that validates and converts days to hours
-def converterDaysTime(days):
+def convert_days_to_hours(days):
     return f'{days} days are {days * 24} hours.'
 
 # Funtion that converts hours to minutes
+def convert_hours_to_minutes(hours):
+    return f'{hours} hours are {hours * 60} minutes'
 
 
