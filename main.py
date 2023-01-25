@@ -4,7 +4,7 @@
 
 # subalgorithm_Library
 
-# Function that validates data entered by the user
+# Function that validates a number entered by the user
 def validate_and_execute():
     # Checking if the entered data is a number valid
     try:
@@ -32,10 +32,15 @@ def convert_hours_to_minutes(hours):
 
 
 
+
+
+
 # Running Aplication
 
-# Variable
+# Variables
 user_input = ''
+
+
 
 while user_input != 'exit':
     user_input = input('Enter a number of days to be converted to minutes:\n')
