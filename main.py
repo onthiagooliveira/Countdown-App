@@ -5,13 +5,25 @@
 
 # subalgorithm_Library
 
+# Function that validates and converts days to hours and minutes
+def convert_days_to_hours(days, conversion_unit):
+    if conversion_unit == 'hours':
+        return f'{days} days are {days * 24} hours.'
+
+    elif conversion_unit == 'minutes':
+        return f'{days} days are {days * 24 * 60 } minutes.'
+
+    else:
+        return 'Unsuppoted unit.'
+
+
 # Function that validates a number entered by the user
 def validate_and_execute():
     # Checking if the entered data is a number valid
     try:
-        user_input_number = int(num_of_days_element)
+        user_input_number = int(days_and_unit_dictionary["days"])
         if user_input_number > 0:
-            calculated_value = convert_days_to_hours(user_input_number)
+            calculated_value = convert_days_to_hours(user_input_number, days_and_unit_dictionary["unit"])
             print(calculated_value)
         elif user_input_number == 0:
             print('You input a 0, please enter a positive number')
@@ -21,14 +33,6 @@ def validate_and_execute():
         print('Your input is not a valid number.')
 
 
-# Function that validates and converts days to hours
-def convert_days_to_hours(days):
-    return f'{days} days are {days * 24} hours.'
-
-
-# Funtion that converts hours to minutes
-def convert_hours_to_minutes(hours):
-    return f'{hours} hours are {hours * 60} minutes.'
 
 
 # Running Aplication
@@ -37,9 +41,10 @@ def convert_hours_to_minutes(hours):
 user_input = ""
 
 while user_input != 'exit':
-    user_input = input('Enter a number of days as a comma separated list to converted to hours:\n')
-    list_of_days = user_input.split(", ")
+    user_input = input('Enter a number of days and conversion unit:\n')
+    days_and_unit = user_input.split(":")
+    print(days_and_unit)
+    days_and_unit_dictionary = {"days": days_and_unit[0], "unit": days_and_unit[1]}
+    print(days_and_unit_dictionary)
+    validate_and_execute()
 
-    for num_of_days_element in set(list_of_days):
-        # Validating the input e running the program
-        validate_and_execute()
