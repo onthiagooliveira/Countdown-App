@@ -38,7 +38,8 @@ user_input = ""
 
 while user_input != 'exit':
     user_input = input('Enter a number of days as a comma separated list to converted to hours:\n')
+    list_of_days = user_input.split(", ")
 
-    for num_of_days_element in user_input.split(", "):
+    for num_of_days_element in set(list_of_days):
         # Validating the input e running the program
         validate_and_execute()
