@@ -2,6 +2,7 @@
     Write a program that takes a user-entered number of days  and calculates progress toward a user-defined goal.
 """
 
+
 # subalgorithm_Library
 
 # Function that validates a number entered by the user
@@ -13,11 +14,11 @@ def validate_and_execute():
             calculated_value = convert_days_to_hours(user_input_number)
             print(calculated_value)
         elif user_input_number == 0:
-            print('You entered a 0, please enter a positive number')
+            print('You input a 0, please enter a positive number')
         else:
             print('It is not possible to convert, you entered a negative number.')
     except ValueError:
-        print('Your entered is not a valid number.')
+        print('Your input is not a valid number.')
 
 
 # Function that validates and converts days to hours
@@ -30,21 +31,14 @@ def convert_hours_to_minutes(hours):
     return f'{hours} hours are {hours * 60} minutes.'
 
 
-
-
-
-
-
 # Running Aplication
 
 # Variables
-user_input = ''
-
-
+user_input = ""
 
 while user_input != 'exit':
-    user_input = input('Enter a number of days to be converted to minutes:\n')
+    user_input = input('Enter a number of days as a comma separated list to converted to hours:\n')
 
-    for num_of_days_element in user_input.split(","):
+    for num_of_days_element in user_input.split(", "):
         # Validating the input e running the program
         validate_and_execute()
