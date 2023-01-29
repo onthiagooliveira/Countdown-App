@@ -6,15 +6,15 @@
 # subalgorithm_Library
 
 # Function that validates and converts days to hours and minutes
-def convert_days_to_hours(days, conversion_unit):
+def convert_days_to_hours(num_of_days, conversion_unit):
     if conversion_unit == 'hours':
-        return f'{days} days are {days * 24} hours.'
+        return f'{num_of_days} days are {num_of_days * 24} hours.'
 
     elif conversion_unit == 'minutes':
-        return f'{days} days are {days * 24 * 60 } minutes.'
+        return f'{num_of_days} days are {num_of_days * 24 * 60 } minutes.'
 
     else:
-        return 'Unsuppoted unit.'
+        return 'Unsupported unit.'
 
 
 # Function that validates a number entered by the user
@@ -46,5 +46,6 @@ while user_input != 'exit':
     print(days_and_unit)
     days_and_unit_dictionary = {"days": days_and_unit[0], "unit": days_and_unit[1]}
     print(days_and_unit_dictionary)
+    print(type(days_and_unit_dictionary))
     validate_and_execute()
 
